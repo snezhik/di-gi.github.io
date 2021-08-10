@@ -1,0 +1,423 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+
+.header{
+  background-color: $accent;
+  &__inner{
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo__link{
+  margin-left: 8px;
+  padding-bottom: 5px;
+  display: block;
+}
+
+.menu__btn{
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: none;
+  position: relative;
+  &::after{
+    content: "";
+    width: 12px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: $accent;
+    position: absolute;
+    top: 15px;
+    left: 14px;
+    box-shadow: 0 4px 0 0 $accent, 0 8px 0 0 $accent;
+  }
+}
+
+.head{
+  background-image: url(../images/bg-slider.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 193px;
+}
+
+.top-slider{
+  background: rgba(33, 33, 33, 0.5);
+  &__item{
+    color: #fff;
+    text-align: center;
+    min-height: 193px;
+  }
+  &__title{
+    line-height: 28px;
+    font-size: 28px;
+    text-transform: uppercase;
+    padding: 36px 0 28px;  
+    font-weight: 400; 
+    max-width: 243px;
+    margin: 0 auto;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 8px;
+      width: 61px;
+      margin: 0 auto;
+      background-color: $text-color;
+    }
+  }
+  &__text{
+    display: none;
+  }
+  &__btn{
+    display: none;
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+  .slick-active{
+      button{
+        background-color: transparent;
+        border: 1px solid #476E4D;
+      }
+    }
+    button{
+      font-size: 0;
+      border: none;
+      background-color: $accent;
+      padding: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+  }
+}
+
+
+.call{
+  background-color: $accent;
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+  &__title{
+    @extend %roboto-500;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+  &__text{
+    font-size: 16px;
+    line-height: 18px;
+    @extend %rubik-400;
+    margin-bottom: 40px;
+  }
+  &__btn{
+    padding: 16px 15px;
+    background-color: $bg-color;
+    color: $accent;
+    font-size: 18px;
+    @extend %roboto-500;
+    border-radius: 3px;
+    border: none;
+    text-transform: uppercase;
+
+  }
+}
+
+.services{
+  padding:25px 0 40px;
+  text-align: center;
+  &__title{
+    margin-bottom: 45px;
+    color: $accent;
+  }
+  &__descr{
+    line-height: 24px;
+    font-size: 20px;
+    color: $text-color;
+    margin-bottom: 21px;
+  }
+  &__text{
+    color: #797979;
+    line-height: 17px;
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+  &__item{
+    min-height: 310px;
+    border: 1px solid $bg-color;
+    border-bottom:  none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 18px;
+    margin: 0 auto;
+    &:last-child{
+      border-bottom:  1px solid $bg-color;
+      }
+    &:hover{
+      .services__item-link,
+      .services__item-text{
+        display: block;
+        // overflow: hidden;
+      }
+      .services__item-title{
+        margin-bottom: 30px;
+      }
+      .services__item-inner{
+        border: 4px solid $accent;
+        margin: 18px 0;
+        padding: 25px 20px ;
+        min-height: 277px;
+      }
+    }
+  }
+  &__item-img{
+    margin: 0 auto 30px;
+  }
+  &__item-title{
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2px;
+    color: $text-color;
+    @extend %roboto-500;
+  }
+
+  &__item-text{
+    display: none;
+    margin-bottom: 17px;
+    @extend %rubik-400;
+  }
+  &__item-link{
+    display: none;
+    color: $default;
+    color: $accent;
+    @extend %roboto-500;
+    text-transform: uppercase;
+  }
+}
+
+.project{
+  text-align: center;
+  padding: 20px 0 20px;
+  background: linear-gradient(180deg, #2B4074 0%, rgba(43, 64, 116, 0) 100%);
+  &__title{
+    color: #fff;
+    margin-bottom: 40px;
+    &::after{
+      background-color: #fff;
+      width: 50px;
+    }
+  }
+  &__item-img{
+    min-height: 250px;
+    width: 100%;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 12px 14px;
+    &:hover{
+      .project__item-inner{
+        opacity: 1;
+      }
+      
+    }
+  }
+  &__item-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($bg-color, .83);
+    border-radius: 4px;
+    min-height: 227px;
+    opacity: 0;
+    transition: all .5s;
+  }
+  &__item-info,
+  &__item-secrch{
+    margin: 0 10px;
+  }
+
+
+  &__item-link{
+    display: block;
+    padding: 20px 0;
+    line-height: 19px;
+    letter-spacing: 2px;
+    color: $accent;
+    @extend %roboto-500;
+
+  }
+}
+
+.team{
+  padding: 20px 0 40px;
+  text-align: center;
+  &__images{
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 4px;
+  }
+  &__title{
+    color: $text-color;
+    margin-bottom: 23px;
+    &::after{
+      width: 50px;
+    }
+  }
+  &__text{
+    margin-bottom: 84px;
+    line-height: 23px;
+  }
+  &__btn{
+    border: none;
+    background-color: $accent;
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 21px 26px;
+    color: $bg-color;
+  }
+}
+
+.blockquote{
+  padding: 55px 0;
+  &__slider{
+    text-align: center;
+  }
+  &__qoute{
+    margin: 0 auto 80px;
+  }
+  &__text{
+    font-size: 24px;
+    line-height: 26px;
+    color: $text-color;
+    font-size: 24px;
+    line-height: 26px;
+  }
+  &__color{
+    color: $accent;
+  }
+  &__author{
+    letter-spacing: 2px;
+    padding-top: 28px;
+    display: block;
+    @extend %roboto-500;
+    padding-bottom: 38px;
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+      button{
+        font-size: 0;
+        border: none;
+        background-color: $accent;
+        padding: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 0 10px;
+      }
+    .slick-active{
+      button{
+        background-color: transparent;
+        border: none;
+        border: 1px solid #476E4D;
+      }
+    }
+  }
+}
+
+
+.footer{
+  padding: 85px 0 40px;
+  background-color: $accent;
+  color: $bg-color;
+  &__bottom{
+    background-color: $bg-color;
+    padding: 56px 0 20px;
+  }
+  &__logo-box{
+    background-color: $accent;
+    width: 230px;
+    height: 60px;
+    margin: 0 auto -30px;
+  }
+  &__logo-img{
+    margin: 0 auto;
+  }
+  &__text{
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  &__social-links{
+    margin-bottom: 45px;
+  }
+  &__social-links,
+  &__address-text-box,
+  &__bottom-link,
+  &__address-texts{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+  }
+  &__social-link +.footer__social-link{
+    margin-top: 20px;
+  }
+  &__address-title{
+    @extend %roboto-500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+  }
+  &__address-link{
+    color: $bg-color;
+    font-size: 16px;
+    line-height: 20px;
+    line-height: 23px;
+  }
+  &__address-text{
+    line-height: 23px;
+  }
+  &__address-texts{
+    margin-bottom: 55px;
+    &:last-child{
+      margin-bottom: 25px;
+    }
+  }
+  &__bottom-link-text{
+    color: $text-color;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+@import 'media';
+

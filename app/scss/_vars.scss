@@ -1,0 +1,42 @@
+$accent:#2B4074;
+$text-color: #4A4A4A;
+$bg-color:#F9F6E5;
+$default: #9B9B9B;
+
+
+%roboto-400{
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+}
+
+
+%roboto-500{
+    font-family: 'Roboto-Medium', sans-serif;
+    font-weight: 500;
+}
+
+
+
+%rubik-400{
+    font-family: 'Rubik-Regular', sans-serif;
+    font-weight: 400;
+}
+
+
+
+
+
+.types__list-paragraph{
+    list-style-type: decimal-leading-zero;
+}
+
+
+%checkbox-hidden,
+%radio-hidden{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+}
+  
